@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Made in Ghana | Shop</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= TOP HEADER ================= -->
+    <header class="header">
+
+        <div class="top-nav">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <div class="logo-icon">
+                    🇬🇭
+                </div>
+
+                <div class="logo-text">
+                    <h1>MADE IN <span>GHANA</span></h1>
+                    <small>Shop Local • Support Local</small>
+                </div>
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for products, brands and categories..."
+                >
+
+                <button id="searchBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+            <div class="nav-actions">
+
+                <a href="login.html">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Login</span>
+                </a>
+
+                <a href="#" class="icon-link">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Wishlist</span>
+                    <b id="wishlist-count">0</b>
+                </a>
+
+                <a href="cart.html" class="icon-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                    <b id="cart-count">0</b>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= MAIN NAVIGATION ================= -->
+        <nav class="main-nav">
+
+            <div class="categories">
+                <i class="fa-solid fa-bars"></i>
+                <span>All Categories</span>
+            </div>
+
+
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="shop.html" class="active">Shop</a>
+                </li>
+
+                <li>
+                    <a href="categories.html">Categories</a>
+                </li>
+
+                <li>
+                    <a href="brands.html">Brands</a>
+                </li>
+
+                <li>
+                    <a href="deals.html">Deals</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <div class="container">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span> &gt; </span>
+            <span>Shop</span>
+        </div>
+
+
+        <!-- HEADER BANNER -->
+        <section class="header-banner">
+
+            <div class="page-title">
+                <h1>Shop All Products</h1>
+
+                <p>
+                    Discover authentic Ghanaian products across all categories.
+                </p>
+            </div>
+
+
+            <div class="support-banner">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <div class="support-banner-text">
+                    <h4>Support Local. Build Ghana.</h4>
+
+                    <p>
+                        Every purchase supports local artisans,
+                        businesses and communities.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SHOP LAYOUT ================= -->
+
+        <div class="shop-layout">
+
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+
+                <div class="filter-header">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>Filter Products</span>
+                </div>
+
+
+                <!-- Categories -->
+                <div class="filter-group">
+
+                    <div class="filter-title">
+                        Categories
+                    </div>
+
+                    <ul class="category-list">
+
+                        <li class="category-item">
+                            <label>
+                                <input type="checkbox" checked>
+                                All Categories
+                            </label>
+                            <span class="count">(84)</span>
+                        </li>
+
+                        <li class="category-item">
+                            <label>
+                                <input type="checkbox">
+                                Fashion
+                            </label>
+                            <span class="count">(12)</span>
+                        </li>
+
+                        <li class="category-item">
+                            <label>
+                                <input type="checkbox">
+                                Beauty & Skincare
+                            </label>
+                            <span class="count">(10)</span>
+                        </li>
+
+                        <li class="category-item">
+                            <label>
+                                <input type="checkbox">
+                                Home & Living
+                            </label>
+                            <span class="count">(11)</span>
+                        </li>
+
+                        <li class="category-item">
+                            <label>
+                                <input type="checkbox">
+                                Food & Beverages
+                            </label>
+                            <span class="count">(9)</span>
+                        </li>
+
+                        <li class="category-item">
+                            <label>
+                                <input type="checkbox">
+                                Arts & Crafts
+                            </label>
+                            <span class="count">(15)</span>
+                        </li>
+
+                        <li class="category-item">
+                            <label>
+                                <input type="checkbox">
+                                Jewelry & Accessories
+                            </label>
+                            <span class="count">(8)</span>
+                        </li>
+
+                        <li class="category-item">
+                            <label>
+                                <input type="checkbox">
+                                Electronics
+                            </label>
+                            <span class="count">(5)</span>
+                        </li>
+
+                        <li class="category-item">
+                            <label>
+                                <input type="checkbox">
+                                Books & Stationery
+                            </label>
+                            <span class="count">(6)</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- PRICE -->
+                <div class="filter-group">
+
+                    <div class="filter-title">
+                        Price Range
+                    </div>
+
+                    <input
+                        type="range"
+                        class="range-slider"
+                        min="0"
+                        max="500"
+                        value="500"
+                        id="priceRange"
+                    >
+
+                    <div class="price-values">
+                        <span>GH₵ 0</span>
+                        <span id="priceValue">GH₵ 500+</span>
+                    </div>
+
+                </div>
+
+
+                <!-- BRAND -->
+                <div class="filter-group">
+
+                    <div class="filter-title">
+                        Brand
+                    </div>
+
+                    <select class="select-input">
+
+                        <option>All Brands</option>
+                        <option>Ghana Made</option>
+                        <option>Akosombo</option>
+                        <option>GTP</option>
+                        <option>Local Crafts</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- RATING -->
+                <div class="filter-group">
+
+                    <div class="filter-title">
+                        Rating
+                    </div>
+
+                    <div class="rating-option">
+
+                        <span class="stars">
+                            ★★★★★
+                        </span>
+
+                        <span>& up</span>
+                        <span class="count">(42)</span>
+
+                    </div>
+
+
+                    <div class="rating-option">
+
+                        <span class="stars">
+                            ★★★★☆
+                        </span>
+
+                        <span>& up</span>
+                        <span class="count">(28)</span>
+
+                    </div>
+
+
+                    <div class="rating-option">
+
+                        <span class="stars">
+                            ★★★☆☆
+                        </span>
+
+                        <span>& up</span>
+                        <span class="count">(16)</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTONS -->
+                <div class="sidebar-buttons">
+
+                    <button
+                        class="btn btn-outline"
+                        id="resetBtn">
+                        Reset Filters
+                    </button>
+
+                    <button
+                        class="btn btn-primary"
+                        id="applyBtn">
+                        Apply Filters
+                    </button>
+
+                </div>
+
+            </aside>
+
+
+            <!-- ================= PRODUCTS ================= -->
+
+            <main class="products-area">
+
+
+                <!-- TOOLBAR -->
+                <div class="products-toolbar">
+
+                    <div class="results-count">
+                        Showing
+                        <strong>1 – 12</strong>
+                        of 84 products
+                    </div>
+
+
+                    <div class="toolbar-controls">
+
+                        <div class="sort-by">
+
+                            <span>Sort by:</span>
+
+                            <select class="select-input">
+
+                                <option>Newest First</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="view-options">
+
+                            <button class="view-btn active">
+                                <i class="fa-solid fa-border-all"></i>
+                            </button>
+
+                            <button class="view-btn">
+                                <i class="fa-solid fa-list"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT GRID -->
+                <div class="product-grid">
+
+
+                    <!-- PRODUCT 1 -->
+                    <div class="product-card">
+
+                        <span class="badge-new">New</span>
+
+                        <button class="wishlist-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="kente bag.webp"
+                            alt="Kente Backpack"
+                            class="product-image"
+                        >
+
+                        <div class="product-title">
+                            Kente Backpack
+                        </div>
+
+                        <div class="product-price">
+                            GH₵150.00
+                        </div>
+
+                        <div class="product-rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <span>(28)</span>
+
+                        </div>
+
+                        <button class="add-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCT 2 -->
+                    <div class="product-card">
+
+                        <span class="badge-new">New</span>
+
+                        <button class="wishlist-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="shea butter.webp"
+                            alt="Raw Shea Butter"
+                            class="product-image"
+                        >
+
+                        <div class="product-title">
+                            Raw Shea Butter (250ml)
+                        </div>
+
+                        <div class="product-price">
+                            GH₵45.00
+                        </div>
+
+                        <div class="product-rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <span>(42)</span>
+
+                        </div>
+
+                        <button class="add-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCT 3 -->
+                    <div class="product-card">
+
+                        <button class="wishlist-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="bracelets.webp"
+                            alt="Ghana Bead Bracelet"
+                            class="product-image"
+                        >
+
+                        <div class="product-title">
+                            Ghana Bead Bracelet
+                        </div>
+
+                        <div class="product-price">
+                            GH₵35.00
+                        </div>
+
+                        <div class="product-rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <span>(15)</span>
+
+                        </div>
+
+                        <button class="add-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCT 4 -->
+                    <div class="product-card">
+
+                        <button class="wishlist-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="stool.webp"
+                            alt="Handcrafted Wooden Stool"
+                            class="product-image"
+                        >
+
+                        <div class="product-title">
+                            Handcrafted Wooden Stool
+                        </div>
+
+                        <div class="product-price">
+                            GH₵280.00
+                        </div>
+
+                        <div class="product-rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <span>(12)</span>
+
+                        </div>
+
+                        <button class="add-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCT 5 -->
+                    <div class="product-card">
+
+                        <button class="wishlist-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="cocoa.webp"
+                            alt="Ghana Cocoa Powder"
+                            class="product-image"
+                        >
+
+                        <div class="product-title">
+                            Ghana Cocoa Powder (250g)
+                        </div>
+
+                        <div class="product-price">
+                            GH₵40.00
+                        </div>
+
+                        <div class="product-rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <span>(31)</span>
+
+                        </div>
+
+                        <button class="add-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCT 6 -->
+                    <div class="product-card">
+
+                        <button class="wishlist-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="momo.webp"
+                            alt="Moringa Black Soap"
+                            class="product-image"
+                        >
+
+                        <div class="product-title">
+                            Moringa Black Soap Set
+                        </div>
+
+                        <div class="product-price">
+                            GH₵60.00
+                        </div>
+
+                        <div class="product-rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <span>(19)</span>
+
+                        </div>
+
+                        <button class="add-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCT 7 -->
+                    <div class="product-card">
+
+                        <button class="wishlist-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="kente cloth.webp"
+                            alt="Kente Shirt"
+                            class="product-image"
+                        >
+
+                        <div class="product-title">
+                            Kente Short Sleeve Shirt
+                        </div>
+
+                        <div class="product-price">
+                            GH₵120.00
+                        </div>
+
+                        <div class="product-rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <span>(23)</span>
+
+                        </div>
+
+                        <button class="add-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCT 8 -->
+                    <div class="product-card">
+
+                        <button class="wishlist-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="skin care.webp"
+                            alt="Skin Care Products"
+                            class="product-image"
+                        >
+
+                        <div class="product-title">
+                            Skin Care Products
+                        </div>
+
+                        <div class="product-price">
+                            GH₵55.00
+                        </div>
+
+                        <div class="product-rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <span>(17)</span>
+
+                        </div>
+
+                        <button class="add-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCT 9 -->
+                    <div class="product-card">
+
+                        <button class="wishlist-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="an neck.webp"
+                            alt="Beaded Necklace"
+                            class="product-image"
+                        >
+
+                        <div class="product-title">
+                            Ankara Beaded Necklace
+                        </div>
+
+                        <div class="product-price">
+                            GH₵60.00
+                        </div>
+
+                        <div class="product-rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <span>(18)</span>
+
+                        </div>
+
+                        <button class="add-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCT 10 -->
+                    <div class="product-card">
+
+                        <button class="wishlist-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="furniture.webp"
+                            alt="Ghanaian Made Furnitures"
+                            class="product-image"
+                        >
+
+                        <div class="product-title">
+                            Ghanaian Made Furniture
+                        </div>
+
+                        <div class="product-price">
+                            GH₵90.00
+                        </div>
+
+                        <div class="product-rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <span>(14)</span>
+
+                        </div>
+
+                        <button class="add-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCT 11 -->
+                    <div class="product-card">
+
+                        <button class="wishlist-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="sobolo.webp"
+                            alt="Ghanaian Local Drinks"
+                            class="product-image"
+                        >
+
+                        <div class="product-title">
+                            Ghanaian Local Drinks (250g)
+                        </div>
+
+                        <div class="product-price">
+                            GH₵40.00
+                        </div>
+
+                        <div class="product-rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <span>(22)</span>
+
+                        </div>
+
+                        <button class="add-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+
+                    <!-- PRODUCT 12 -->
+                    <div class="product-card">
+
+                        <button class="wishlist-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="stool.webp"
+                            alt="Hnadmade Craft Stool"
+                            class="product-image"
+                        >
+
+                        <div class="product-title">
+                            Handmade Craft Stool
+                        </div>
+
+                        <div class="product-price">
+                            GH₵75.00
+                        </div>
+
+                        <div class="product-rating">
+
+                            <span class="stars">
+                                ★★★★★
+                            </span>
+
+                            <span>(11)</span>
+
+                        </div>
+
+                        <button class="add-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAGINATION -->
+                <div class="pagination">
+
+                    <a href="#" class="page-item">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+
+                    <a href="#" class="page-item active">1</a>
+                    <a href="#" class="page-item">2</a>
+                    <a href="#" class="page-item">3</a>
+                    <a href="#" class="page-item">4</a>
+                    <a href="#" class="page-item">5</a>
+
+                    <span>...</span>
+
+                    <a href="#" class="page-item">7</a>
+
+                    <a href="#" class="page-item">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                </div>
+
+            </main>
+
+        </div>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section class="feature-banner">
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <div class="feature-text">
+                    <h5>100% Authentic</h5>
+                    <p>Genuine Ghanaian products from verified sellers.</p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+
+                <div class="feature-text">
+                    <h5>Fast Delivery</h5>
+                    <p>Quick and reliable delivery across Ghana.</p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+
+                <div class="feature-text">
+                    <h5>Support Local</h5>
+                    <p>Empower local artisans and businesses.</p>
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="feature-text">
+                    <h5>Secure Payments</h5>
+                    <p>Safe and secure payments you can trust.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Made in Ghana | Categories</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            background: #fcfbf7;
+        }
+
+        .categories-page {
+            padding: 25px 8% 45px;
+        }
+
+        .categories-hero {
+            background: linear-gradient(120deg, #fff7e8 0%, #ffffff 100%);
+            border: 1px solid #f0e4cc;
+            border-radius: 18px;
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .categories-hero h1 {
+            font-size: 28px;
+            color: #0a5d2f;
+            margin-bottom: 8px;
+        }
+
+        .categories-hero p {
+            color: #666;
+            line-height: 1.6;
+            max-width: 620px;
+        }
+
+        .categories-hero img {
+            width: 180px;
+            height: 180px;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+
+        .section-card {
+            background: #fff;
+            border: 1px solid #e9e3d4;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 22px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .section-title h2 {
+            font-size: 20px;
+            color: #0a5d2f;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .category-card {
+            border: 1px solid #eee;
+            border-radius: 14px;
+            padding: 14px;
+            background: #fffdfa;
+            transition: 0.2s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .category-card h3 {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .category-card p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .product-card {
+            border: 1px solid #eee;
+            border-radius: 14px;
+            padding: 14px;
+            background: #fff;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .product-card .price {
+            color: #087a3b;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .product-card button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #087a3b;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        @media (max-width: 900px) {
+            .category-grid,
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .categories-hero {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .categories-hero img {
+                width: 100%;
+                height: 180px;
+            }
+
+            .category-grid,
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="top-nav">
+            <div class="logo">
+                <div class="logo-icon">🇬🇭</div>
+                <div class="logo-text">
+                    <h1>MADE IN <span>GHANA</span></h1>
+                    <small>Shop Local • Support Local</small>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search for products, brands and categories...">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="nav-actions">
+                <a href="login.html"><i class="fa-regular fa-user"></i><span>Login</span></a>
+                <a href="#" class="icon-link"><i class="fa-regular fa-heart"></i><span>Wishlist</span><b>0</b></a>
+                <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span><b>2</b></a>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="categories">
+                <i class="fa-solid fa-bars"></i>
+                <span>All Categories</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="categories.html" class="active">Categories</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="categories-page">
+        <section class="categories-hero">
+            <div>
+                <h1>Explore Ghanaian Categories</h1>
+                <p>Browse authentic products from fashion and skincare to home décor, handmade crafts, food, and more. Every category celebrates local talent and quality.</p>
+            </div>
+            <img src="ghana n.webp" alt="Ghanaian artisan products">
+        </section>
+
+        <section class="section-card">
+            <div class="section-title">
+                <h2>Popular Categories</h2>
+                <a href="shop.html">View all products</a>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="kente cloth.webp" alt="Fashion">
+                    <h3>Fashion</h3>
+                    <p>Clothing, bags, and accessories</p>
+                </div>
+                <div class="category-card">
+                    <img src="skin care.webp" alt="Beauty">
+                    <h3>Beauty & Skincare</h3>
+                    <p>Shea butter, natural oils, and care</p>
+                </div>
+                <div class="category-card">
+                    <img src="furniture.webp" alt="Home">
+                    <h3>Home & Living</h3>
+                    <p>Furniture and stylish décor</p>
+                </div>
+                <div class="category-card">
+                    <img src="sobolo.webp" alt="Food">
+                    <h3>Food & Beverages</h3>
+                    <p>Traditional drinks and snacks</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <div class="section-title">
+                <h2>Featured in This Category</h2>
+                <a href="shop.html">See more</a>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="bracelets.webp" alt="Bracelets">
+                    <h3>Ghana Bead Bracelet</h3>
+                    <p class="price">GH₵35.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="kente bag.webp" alt="Backpack">
+                    <h3>Kente Backpack</h3>
+                    <p class="price">GH₵150.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="shea butter.webp" alt="Shea butter">
+                    <h3>Raw Shea Butter</h3>
+                    <p class="price">GH₵45.00</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="arts.webp" alt="Art piece">
+                    <h3>Traditional Art Piece</h3>
+                    <p class="price">GH₵120.00</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h2>MADE IN <span>GHANA</span></h2>
+                <p>Supporting authentic Ghanaian makers, businesses, and communities every day.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="categories.html">Categories</a>
+            </div>
+            <div>
+                <h3>Customer Care</h3>
+                <a href="#">Delivery Info</a>
+                <a href="#">Returns</a>
+                <a href="#">Support</a>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>+233 24 000 0000</p>
+                <p>support@madeinghana.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <span>© 2026 Made in Ghana. All rights reserved.</span>
+            <span>Built for local pride.</span>
+        </div>
+    </footer>
+</body>
+</html>

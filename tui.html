@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Made in Ghana Marketplace - Shop</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #087a3b;
+            --primary-dark: #055d2c;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --bg-light: #faf8f3;
+            --border-color: #e5e5e5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fcfcfc;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumb {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Header Banner */
+        .header-banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(100deg, #fffdf9, #f6f0e7);
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+        }
+
+        .page-title h1 {
+            font-size: 28px;
+            color: var(--text-main);
+            margin-bottom: 4px;
+        }
+
+        .page-title p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .support-banner {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #ffffff;
+            padding: 12px 18px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .support-banner i {
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        .support-banner-text h4 {
+            font-size: 14px;
+            color: var(--primary);
+        }
+
+        .support-banner-text p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Shop Layout */
+        .shop-layout {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 30px;
+        }
+
+        /* Sidebar Filters */
+        .sidebar {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .filter-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .filter-group {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .filter-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .category-list {
+            list-style: none;
+        }
+
+        .category-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .category-item label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .count {
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        .range-slider {
+            width: 100%;
+            margin-bottom: 8px;
+            accent-color: var(--primary);
+        }
+
+        .price-values {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .select-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 13px;
+            outline: none;
+        }
+
+        .rating-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            margin-bottom: 6px;
+            cursor: pointer;
+        }
+
+        .stars {
+            color: #ffae00;
+            font-size: 12px;
+        }
+
+        .sidebar-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            background: #f5f5f5;
+        }
+
+        /* Toolbar */
+        .products-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background: #ffffff;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+        }
+
+        .results-count {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .toolbar-controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .sort-by {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .view-options {
+            display: flex;
+            gap: 4px;
+        }
+
+        .view-btn {
+            padding: 6px 10px;
+            border: 1px solid var(--border-color);
+            background: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+
+        .view-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Products Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            position: relative;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            background: white;
+            transition: transform 0.25s, box-shadow 0.25s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .badge-new {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--primary);
+            color: white;
+            font-size: 10px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .wishlist-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            border: none;
+            background: white;
+            font-size: 16px;
+            color: #777;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .add-cart {
+            margin-top: 12px;
+            border: none;
+            background: var(--primary);
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .add-cart:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 12px;
+            border-radius: 4px;
+        }
+
+        .product-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: var(--text-main);
+        }
+
+        .product-price {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: auto;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 30px;
+        }
+
+        .page-item {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .page-item.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Feature Banner */
+        .feature-banner {
+            margin-top: 40px;
+            padding: 25px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        .feature-text h5 {
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+
+        .feature-text p {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .shop-layout {
+                grid-template-columns: 220px 1fr;
+            }
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .feature-banner {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-banner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .shop-layout {
+                grid-template-columns: 1fr;
+            }
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .feature-banner {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <div class="breadcrumb">
+            <a href="#">Home</a> &gt; <span>Shop</span>
+        </div>
+
+        <!-- Header Section -->
+        <div class="header-banner">
+            <div class="page-title">
+                <h1>Shop All Products</h1>
+                <p>Discover authentic Ghanaian products across all categories.</p>
+            </div>
+            <div class="support-banner">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <div class="support-banner-text">
+                    <h4>Support Local. Build Ghana.</h4>
+                    <p>Every purchase supports local artisans, businesses and communities.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Layout -->
+        <div class="shop-layout">
+            
+            <!-- Sidebar Filters -->
+            <aside class="sidebar">
+                <div class="filter-header">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span>Filter Products</span>
+                </div>
+
+                <!-- Categories -->
+                <div class="filter-group">
+                    <div class="filter-title">Categories</div>
+                    <ul class="category-list">
+                        <li class="category-item"><label><input type="checkbox" checked> All Categories</label><span class="count">(84)</span></li>
+                        <li class="category-item"><label><input type="checkbox"> Fashion</label><span class="count">(12)</span></li>
+                        <li class="category-item"><label><input type="checkbox"> Beauty & Skincare</label><span class="count">(10)</span></li>
+                        <li class="category-item"><label><input type="checkbox"> Home & Living</label><span class="count">(11)</span></li>
+                        <li class="category-item"><label><input type="checkbox"> Food & Beverages</label><span class="count">(9)</span></li>
+                        <li class="category-item"><label><input type="checkbox"> Arts & Crafts</label><span class="count">(15)</span></li>
+                        <li class="category-item"><label><input type="checkbox"> Jewelry & Accessories</label><span class="count">(8)</span></li>
+                        <li class="category-item"><label><input type="checkbox"> Electronics</label><span class="count">(5)</span></li>
+                        <li class="category-item"><label><input type="checkbox"> Books & Stationery</label><span class="count">(6)</span></li>
+                    </ul>
+                </div>
+
+                <!-- Price Range -->
+                <div class="filter-group">
+                    <div class="filter-title">Price Range</div>
+                    <input type="range" class="range-slider" min="0" max="500" value="500">
+                    <div class="price-values">
+                        <span>GH₵ 0</span>
+                        <span>GH₵ 500+</span>
+                    </div>
+                </div>
+
+                <!-- Brand -->
+                <div class="filter-group">
+                    <div class="filter-title">Brand</div>
+                    <select class="select-input">
+                        <option>All Brands</option>
+                    </select>
+                </div>
+
+                <!-- Rating -->
+                <div class="filter-group">
+                    <div class="filter-title">Rating</div>
+                    <div class="rating-option">
+                        <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                        <span>& up</span> <span class="count">(42)</span>
+                    </div>
+                    <div class="rating-option">
+                        <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                        <span>& up</span> <span class="count">(28)</span>
+                    </div>
+                    <div class="rating-option">
+                        <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                        <span>& up</span> <span class="count">(16)</span>
+                    </div>
+                    <div class="rating-option">
+                        <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                        <span>& up</span> <span class="count">(6)</span>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="sidebar-buttons">
+                    <button class="btn btn-outline">Reset Filters</button>
+                    <button class="btn btn-primary">Apply Filters</button>
+                </div>
+            </aside>
+
+            <!-- Main Products View -->
+            <main class="products-area">
+                
+                <!-- Toolbar -->
+                <div class="products-toolbar">
+                    <div class="results-count">
+                        Showing <strong>1 – 12</strong> of 84 products
+                    </div>
+                    <div class="toolbar-controls">
+                        <div class="sort-by">
+                            <span>Sort by:</span>
+                            <select class="select-input" style="width: 130px;">
+                                <option>Newest First</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                            </select>
+                        </div>
+                        <div class="view-options">
+                            <button class="view-btn active"><i class="fa-solid fa-border-all"></i></button>
+                            <button class="view-btn"><i class="fa-solid fa-list"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="product-grid">
+                    
+                    <!-- Card 1 -->
+                    <div class="product-card">
+                        <span class="badge-new">New</span>
+                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <img src="https://via.placeholder.com/200x200/f8f8f8/333333?text=Kente+Backpack" alt="Kente Backpack" class="product-image">
+                        <div class="product-title">Kente Backpack</div>
+                        <div class="product-price">GH₵150.00</div>
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span>(28)</span>
+                        </div>
+                        <button class="add-cart" data-product="Kente Backpack" data-price="150">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="product-card">
+                        <span class="badge-new">New</span>
+                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <img src="https://via.placeholder.com/200x200/f8f8f8/333333?text=Shea+Butter" alt="Raw Shea Butter" class="product-image">
+                        <div class="product-title">Raw Shea Butter (250ml)</div>
+                        <div class="product-price">GH₵45.00</div>
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span>(42)</span>
+                        </div>
+                        <button class="add-cart" data-product="Raw Shea Butter" data-price="45">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <img src="https://via.placeholder.com/200x200/f8f8f8/333333?text=Bead+Bracelet" alt="Ghana Bead Bracelet" class="product-image">
+                        <div class="product-title">Ghana Bead Bracelet</div>
+                        <div class="product-price">GH₵35.00</div>
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span>(15)</span>
+                        </div>
+                        <button class="add-cart" data-product="Ghana Bead Bracelet" data-price="35">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <img src="https://via.placeholder.com/200x200/f8f8f8/333333?text=Wooden+Stool" alt="Handcrafted Wooden Stool" class="product-image">
+                        <div class="product-title">Handcrafted Wooden Stool</div>
+                        <div class="product-price">GH₵280.00</div>
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span>(12)</span>
+                        </div>
+                        <button class="add-cart" data-product="Handcrafted Wooden Stool" data-price="280">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <img src="https://via.placeholder.com/200x200/f8f8f8/333333?text=Cocoa+Powder" alt="Ghana Cocoa Powder" class="product-image">
+                        <div class="product-title">Ghana Cocoa Powder (250g)</div>
+                        <div class="product-price">GH₵40.00</div>
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span>(31)</span>
+                        </div>
+                        <button class="add-cart" data-product="Ghana Cocoa Powder" data-price="40">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <img src="https://via.placeholder.com/200x200/f8f8f8/333333?text=Black+Soap" alt="Moringa Black Soap Set" class="product-image">
+                        <div class="product-title">Moringa Black Soap Set</div>
+                        <div class="product-price">GH₵60.00</div>
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span>(19)</span>
+                        </div>
+                        <button class="add-cart" data-product="Moringa Black Soap Set" data-price="60">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <img src="https://via.placeholder.com/200x200/f8f8f8/333333?text=Kente+Shirt" alt="Kente Short Sleeve Shirt" class="product-image">
+                        <div class="product-title">Kente Short Sleeve Shirt</div>
+                        <div class="product-price">GH₵120.00</div>
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span>(23)</span>
+                        </div>
+                        <button class="add-cart" data-product="Kente Short Sleeve Shirt" data-price="120">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <img src="https://via.placeholder.com/200x200/f8f8f8/333333?text=Leather+Journal" alt="Leather Journal" class="product-image">
+                        <div class="product-title">Leather Journal</div>
+                        <div class="product-price">GH₵55.00</div>
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span>(17)</span>
+                        </div>
+                        <button class="add-cart" data-product="Leather Journal" data-price="55">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <img src="https://via.placeholder.com/200x200/f8f8f8/333333?text=Beaded+Necklace" alt="Ankara Beaded Necklace" class="product-image">
+                        <div class="product-title">Ankara Beaded Necklace</div>
+                        <div class="product-price">GH₵60.00</div>
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span>(18)</span>
+                        </div>
+                        <button class="add-cart" data-product="Ankara Beaded Necklace" data-price="60">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 10 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <img src="https://via.placeholder.com/200x200/f8f8f8/333333?text=Wall+Mask" alt="Ghanaian Wall Mask" class="product-image">
+                        <div class="product-title">Ghanaian Wall Mask</div>
+                        <div class="product-price">GH₵90.00</div>
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span>(14)</span>
+                        </div>
+                        <button class="add-cart" data-product="Ghanaian Wall Mask" data-price="90">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 11 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <img src="https://via.placeholder.com/200x200/f8f8f8/333333?text=Coffee" alt="Gye Nyame Coffee" class="product-image">
+                        <div class="product-title">Gye Nyame Coffee (250g)</div>
+                        <div class="product-price">GH₵40.00</div>
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span>(22)</span>
+                        </div>
+                        <button class="add-cart" data-product="Gye Nyame Coffee" data-price="40">Add to Cart</button>
+                    </div>
+
+                    <!-- Card 12 -->
+                    <div class="product-card">
+                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <img src="https://via.placeholder.com/200x200/f8f8f8/333333?text=Reed+Diffuser" alt="Lemongrass Reed Diffuser" class="product-image">
+                        <div class="product-title">Lemongrass Reed Diffuser</div>
+                        <div class="product-price">GH₵75.00</div>
+                        <div class="product-rating">
+                            <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            <span>(11)</span>
+                        </div>
+                        <button class="add-cart" data-product="Lemongrass Reed Diffuser" data-price="75">Add to Cart</button>
+                    </div>
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-item"><i class="fa-solid fa-chevron-left"></i></a>
+                    <a href="#" class="page-item active">1</a>
+                    <a href="#" class="page-item">2</a>
+                    <a href="#" class="page-item">3</a>
+                    <a href="#" class="page-item">4</a>
+                    <a href="#" class="page-item">5</a>
+                    <span style="color: var(--text-muted); font-size: 12px;">...</span>
+                    <a href="#" class="page-item">7</a>
+                    <a href="#" class="page-item"><i class="fa-solid fa-chevron-right"></i></a>
+                </div>
+
+            </main>
+        </div>
+
+        <!-- Footer Feature Section -->
+        <div class="feature-banner">
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="feature-text">
+                    <h5>100% Authentic</h5>
+                    <p>Genuine Ghanaian products from verified sellers.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                <div class="feature-text">
+                    <h5>Fast Delivery</h5>
+                    <p>Quick and reliable delivery across Ghana.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
+                <div class="feature-text">
+                    <h5>Support Local</h5>
+                    <p>Empower local artisans and businesses.</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="fa-solid fa-lock"></i></div>
+                <div class="feature-text">
+                    <h5>Secure Payments</h5>
+                    <p>Safe and secure payments you can trust.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127059.088899505!2d-0.24584282361668266!3d5.591208693895782!2m3!1f0!0f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0xbed14ed8650e2dd3!2sAccra%2C%20Ghana!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Made in Ghana Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="top-nav">
+      <div class="logo">
+        <div class="logo-icon">🇬🇭</div>
+        <div class="logo-text">
+          <h1>MADE IN <span>GHANA</span></h1>
+          <small>Shop Local • Support Local</small>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <input type="text" placeholder="Search for products, brands and categories...">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#"><i class="fa-regular fa-user"></i><span>Login</span></a>
+        <a href="#" class="icon-link"><i class="fa-regular fa-heart"></i><span>Wishlist</span><b>2</b></a>
+        <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span><b>3</b></a>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <div class="categories">
+        <i class="fa-solid fa-bars"></i>
+        <span>All Categories</span>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="deals.html">Deals</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="#">Home</a> &gt; <span>About Us</span>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>About Made in Ghana Marketplace</h1>
+      <h2 class="subheading">Buy Local. Empower Ghana.</h2>
+      <p>Made in Ghana Marketplace is an online platform dedicated to showcasing authentic Ghanaian products and connecting local artisans, producers and brands with customers across the country and the world.</p>
+      
+      <div class="value-props">
+        <div class="prop-item">
+          <i class="fa-solid fa-users"></i>
+          <div>
+            <strong>Support Local</strong>
+            <p>Your purchases support artisans, businesses and communities.</p>
+          </div>
+        </div>
+        <div class="prop-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <strong>100% Authentic</strong>
+            <p>We verify sellers and ensure authentic Ghanaian products.</p>
+          </div>
+        </div>
+        <div class="prop-item">
+          <i class="fa-solid fa-leaf"></i>
+          <div>
+            <strong>Sustainable</strong>
+            <p>We promote eco-friendly materials and responsible production.</p>
+          </div>
+        </div>
+        <div class="prop-item">
+          <i class="fa-solid fa-lock"></i>
+          <div>
+            <strong>Secure Shopping</strong>
+            <p>Enjoy safe payments, buyer protection and fast delivery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image-container">
+      <img src="seam.webp" alt="Tailor working on Ghanaian fabric">
+      <div class="quote-card">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <h3>When you buy Made in Ghana, you build Ghana.</h3>
+        <p>Thank you for supporting our people and our culture.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid Section (Artisan, Form, Contact, Map) -->
+  <section class="grid-container">
+    <!-- Artisan Spotlight -->
+    <div class="card spotlight-card">
+      <div class="card-header">Artisan Spotlight</div>
+      <div class="spotlight-body">
+        <img src="carver.webp" alt="Kwame Mensah">
+        <div class="spotlight-info">
+          <h3>Kwame Mensah</h3>
+          <p class="role">Wood Carver – Kumasi, Ashanti Region</p>
+          <p class="description">Kwame creates beautiful handcrafted wooden products inspired by Ghana's rich culture and traditions.</p>
+          <blockquote class="quote-box">
+            "My craft is my heritage. Through this platform, I can share my work with the world."
+          </blockquote>
+          <a href="#" class="btn-outline">View His Products</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Get in Touch Form -->
+    <div class="card">
+      <div class="card-header">Get in Touch</div>
+      <form class="contact-form">
+        <div class="input-icon">
+          <i class="fa-regular fa-user"></i>
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="input-icon">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="input-icon">
+          <i class="fa-solid fa-tag"></i>
+          <input type="text" placeholder="Subject" required>
+        </div>
+        <div class="input-icon textarea-icon">
+          <i class="fa-regular fa-comment"></i>
+          <textarea placeholder="Your Message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit"><i class="fa-regular fa-paper-plane"></i> Send Message</button>
+      </form>
+    </div>
+
+    <!-- Contact Information -->
+    <div class="card">
+      <div class="card-header">Contact Information</div>
+      <div class="info-list">
+        <p><i class="fa-solid fa-phone"></i> +233 30 123 4567</p>
+        <p><i class="fa-regular fa-envelope"></i> info@madeinghanamarketplace.com</p>
+        <p><i class="fa-regular fa-clock"></i> Mon - Fri: 8:00 AM - 5:00 PM<br><span class="indent">Sat: 9:00 AM - 1:00 PM</span></p>
+        <p><i class="fa-solid fa-location-dot"></i> No. 15 Independence Ave,<br><span class="indent">Accra, Ghana</span></p>
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-btn instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-btn twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="social-btn youtube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="branches-section">
+  <h2>Find Our Branches & Dealers</h2>
+  
+  <!-- Search and Filter Bar -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search by branch name, city, or dealer..." onkeyup="filterBranches()">
+  </div>
+
+  <!-- Cards Grid -->
+  <div class="branches-grid" id="branchesGrid">
+    
+    <!-- Branch 1 -->
+    <div class="card" data-name="adum branch kumasi central">
+      <div class="card-header">Adum Branch</div>
+      <div class="map-placeholder">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Adum Branch Office" class="map-img">
+      </div>
+      <div class="card-body">
+        <p class="branch-address"><strong>Location:</strong> Amakom Road, Adum, Kumasi</p>
+        <p class="branch-type"><strong>Type:</strong> Main Branch</p>
+        <a href="https://maps.google.com/?q=Adum,+Kumasi" target="_blank" class="direction-btn">View on Map</a>
+      </div>
+    </div>
+
+    <!-- Branch 2 -->
+    <div class="card" data-name="asafo dealer kumasi market">
+      <div class="card-header">Asafo Dealer Center</div>
+      <div class="map-placeholder">
+        <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18f729b?auto=format&fit=crop&w=600&q=80" alt="Asafo Branch Office" class="map-img">
+      </div>
+      <div class="card-body">
+        <p class="branch-address"><strong>Location:</strong> Asafo Market Area, Kumasi</p>
+        <p class="branch-type"><strong>Type:</strong> Authorized Dealer</p>
+        <a href="https://maps.google.com/?q=Asafo,+Kumasi" target="_blank" class="direction-btn">View on Map</a>
+      </div>
+    </div>
+
+    <!-- Branch 3 -->
+    <div class="card" data-name="knust branch university campus">
+      <div class="card-header">KNUST Branch</div>
+      <div class="map-placeholder">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="KNUST Branch Office" class="map-img">
+      </div>
+      <div class="card-body">
+        <p class="branch-address"><strong>Location:</strong> Commercial Area, KNUST, Kumasi</p>
+        <p class="branch-type"><strong>Type:</strong> Sub-Branch</p>
+        <a href="https://maps.google.com/?q=KNUST,+Kumasi" target="_blank" class="direction-btn">View on Map</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Features Strip -->
+  <section class="features-bar">
+    <div class="feature-item">
+      <i class="fa-solid fa-bag-shopping feature-icon"></i>
+      <div>
+        <strong>Why Shop With Us?</strong>
+        <ul>
+          <li>✔ Wide range of authentic Ghanaian products</li>
+          <li>✔ Verified local sellers and brands</li>
+          <li>✔ Fast and reliable delivery</li>
+          <li>✔ Easy returns and customer support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div>
+        <strong>Payment Methods</strong>
+        <p>We offer secure and convenient payment options.</p>
+        <div class="payment-icons">
+          <span class="pay-card visa">VISA</span>
+          <span class="pay-card mastercard">MC</span>
+          <span class="pay-card momo">MTN</span>
+          <span class="pay-card vodafone">Voda</span>
+          <span class="pay-card paypal">PayPal</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <i class="fa-regular fa-envelope feature-icon"></i>
+      <div>
+        <strong>Newsletter</strong>
+        <p>Subscribe to get updates on new products, deals and stories from Ghana.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Enter your email">
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <i class="fa-solid fa-truck-fast feature-icon"></i>
+      <div>
+        <strong>We Deliver Across Ghana</strong>
+        <p>From Accra to Tamale, Takoradi to Bolgatanga.<br>We've got you covered.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col brand-col">
+        <div class="logo">
+          <span class="flag-icon">🇬🇭</span>
+          <div class="logo-text light">
+            <span class="brand-title">MADE IN GHANA</span>
+            <span class="brand-sub">MARKETPLACE</span>
+          </div>
+        </div>
+        <p>The home of authentic Ghanaian products. Support local. Empower communities. Build Ghana.</p>
+        <div class="social-links dark">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Brands</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">Discover Ghana</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping & Delivery</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop With Us</h4>
+        <ul class="icon-list">
+          <li><i class="fa-solid fa-shield-halved"></i> 100% Authentic Products</li>
+          <li><i class="fa-solid fa-lock"></i> Secure Payments</li>
+          <li><i class="fa-solid fa-user-shield"></i> Buyer Protection</li>
+          <li><i class="fa-solid fa-truck"></i> Fast Delivery</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p><i class="fa-solid fa-phone"></i> +233 30 123 4567</p>
+        <p><i class="fa-regular fa-envelope"></i> info@madeinghanamarketplace.com</p>
+        <p><i class="fa-solid fa-location-dot"></i> No. 15 Independence Ave,<br>Accra, Ghana</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2024 Made in Ghana Marketplace. All Rights Reserved.</span>
+      <span>Proudly Ghanaian 🇬🇭</span>
+    </div>
+  </footer>
+
+</body>
+</html>

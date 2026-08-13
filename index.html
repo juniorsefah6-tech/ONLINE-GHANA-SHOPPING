@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Made in Ghana Marketplace</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Icons -->
+    <a href="shop.html"></a>
+          
+</head>
+
+<body>
+
+    <!-- TOP NAVIGATION -->
+    <header class="header">
+        <div class="top-nav">
+
+            <!-- LOGO -->
+            <div class="logo">
+                
+
+                <div class="logo-text">
+                    <h1>MADE IN <span>GHANA</span></h1>
+
+                </div>
+            </div>
+
+
+            <!-- SEARCH BAR -->
+            <div class="search-box">
+                <input
+                    type="text"
+                    placeholder="Search for products, brands and categories..."
+                >
+
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+            <div class="nav-actions">
+
+                <a href="#">
+                    <i class="fa-regular fa-user"></i>
+                    <span>Login</span>
+                </a>
+
+                <a href="#" class="icon-link">
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Wishlist</span>
+                    <b>0</b>
+                </a>
+
+                <a href="cart.html" class="icon-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>Cart</span>
+                    <b>0</b>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- GREEN NAVIGATION BAR -->
+        <nav class="main-nav">
+
+            <!-- ALL CATEGORIES -->
+            <div class="categories">
+                <i class="fa-solid fa-bars"></i>
+                <span>All Categories</span>
+            </div>
+
+
+            <!-- MENU -->
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="shop.html">Shop</a>
+                </li>
+
+                <li>
+                    <a href="categories.html">Categories</a>
+                </li>
+
+                <li>
+                    <a href="brands.html">Brands</a>
+                </li>
+
+                <li>
+                    <a href="deals.html">Deals</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+
+            <!-- GHANA TEXT -->
+            <div class="ghana-pride">
+                <span>🇬🇭</span>
+                Proudly Ghanaian
+            </div>
+
+        </nav>
+
+    </header>
+
+    <script src="script.js"></script>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Support Local.</h1>
+        <h2>Buy Ghanaian.</h2>
+
+        <p>
+            Discover authentic Ghanaian products made
+            with passion, skill and pride.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="btn-primary" onclick="shopNow()">
+                🛍 Shop Now
+            </button>
+
+            <button class="btn-secondary" onclick="exploreCategories()">
+                Explore Categories
+            </button>
+        </div>
+
+        <div class="trust-items">
+            <div>
+                <span>🛍</span>
+                <strong>100% Ghanaian</strong>
+                <small>Products & Brands</small>
+            </div>
+
+            <div>
+                <span>🛡</span>
+                <strong>Secure Payments</strong>
+                <small>Safe & Trusted</small>
+            </div>
+
+            <div>
+                <span>🚚</span>
+                <strong>Fast Delivery</strong>
+                <small>Across Ghana</small>
+            </div>
+
+            <div>
+                <span>🌱</span>
+                <strong>Support Local</strong>
+                <small>Empower Communities</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="ghana n.webp" alt="Ghanaian Products">
+
+        <div class="quality-box">
+            <h3>🛡 Quality You Can Trust</h3>
+            <p>
+                Carefully selected products from
+                verified Ghanaian sellers.
+            </p>
+
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+<section class="section">
+    <div class="section-heading">
+        <h2>Shop by Category</h2>
+
+        <button onclick="viewCategories()">
+            View all categories →
+        </button>
+    </div>
+
+    <div class="category-grid">
+
+        <div class="category-card" onclick="openCategory('Fashion')">
+            <img src="kente cloth.webp" alt="Fashion">
+            <h3>Fashion</h3>
+            <p>Clothing & Wear</p>
+        </div>
+
+        <div class="category-card" onclick="openCategory('Beauty')">
+            <img src="skin care.webp" alt="Beauty">
+            <h3>Beauty & Skincare</h3>
+        </div>
+
+        <div class="category-card" onclick="openCategory('Home')">
+            <img src="furniture.webp" alt="Home">
+            <h3>Home & Living</h3>
+        </div>
+
+        <div class="category-card" onclick="openCategory('Food')">
+            <img src="sobolo.webp" alt="Food">
+            <h3>Food & Beverages</h3>
+        </div>
+
+        <div class="category-card" onclick="openCategory('Arts')">
+            <img src="arts.webp" alt="Arts">
+            <h3>Arts & Crafts</h3>
+        </div>
+
+        <div class="category-card" onclick="openCategory('Jewelry')">
+            <img src="jewelery.webp" alt="Jewelry">
+            <h3>Jewelry & Accessories</h3>
+        </div>
+
+        <div class="category-card" onclick="openCategory('Electronics')">
+            <img src="samsung.webp" alt="Electronics">
+            <h3>Electronics</h3>
+        </div>
+
+        <div class="category-card" onclick="openCategory('Books')">
+            <img src="g stoy.webp" alt="Books">
+            <h3>Books & Stationery</h3>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= FEATURED PRODUCTS ================= -->
+<section class="section">
+    <div class="section-heading">
+        <h2>Featured Products</h2>
+
+        <button onclick="viewProducts()">
+            View all products →
+        </button>
+    </div>
+
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <button class="heart" onclick="addWishlist(this)">♡</button>
+
+            <div class="product-image">
+                <img src="kente bag.webp" alt="Kente Backpack">
+            </div>
+
+            <h3>Kente Backpack</h3>
+            <p class="price">GH₵150.00</p>
+
+            <div class="rating">
+                ★★★★★ <span>(28)</span>
+            </div>
+
+            <button class="cart-btn" onclick="addToCart('Kente Backpack', 150)">
+                Add to Cart
+            </button>
+        </div>
+
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <button class="heart" onclick="addWishlist(this)">♡</button>
+
+            <div class="product-image">
+                <img src="shea butter.webp" alt="Raw Shea Butter">
+            </div>
+
+            <h3>Raw Shea Butter (250ml)</h3>
+            <p class="price">GH₵45.00</p>
+
+            <div class="rating">
+                ★★★★★ <span>(42)</span>
+            </div>
+
+            <button class="cart-btn" onclick="addToCart('Raw Shea Butter', 45)">
+                Add to Cart
+            </button>
+        </div>
+
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <button class="heart" onclick="addWishlist(this)">♡</button>
+
+            <div class="product-image">
+                <img src="bracelets.webp" alt="Ghana Bead Bracelet">
+            </div>
+
+            <h3>Ghana Bead Bracelet</h3>
+            <p class="price">GH₵35.00</p>
+
+            <div class="rating">
+                ★★★★★ <span>(15)</span>
+            </div>
+
+            <button class="cart-btn" onclick="addToCart('Ghana Bead Bracelet', 35)">
+                Add to Cart
+            </button>
+        </div>
+
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <button class="heart" onclick="addWishlist(this)">♡</button>
+
+            <div class="product-image">
+                <img src="stool.webp" alt="Wooden Stool">
+            </div>
+
+            <h3>Handcrafted Wooden Stool</h3>
+            <p class="price">GH₵280.00</p>
+
+            <div class="rating">
+                ★★★★★ <span>(12)</span>
+            </div>
+
+            <button class="cart-btn" onclick="addToCart('Wooden Stool', 280)">
+                Add to Cart
+            </button>
+        </div>
+
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <button class="heart" onclick="addWishlist(this)">♡</button>
+
+            <div class="product-image">
+                <img src="cocoa.webp" alt="Ghana Cocoa Coffee">
+            </div>
+
+            <h3>Ghana Cocoa Coffee (250g)</h3>
+            <p class="price">GH₵40.00</p>
+
+            <div class="rating">
+                ★★★★★ <span>(31)</span>
+            </div>
+
+            <button class="cart-btn" onclick="addToCart('Ghana Cocoa Coffee', 40)">
+                Add to Cart
+            </button>
+        </div>
+
+
+        <!-- Product 6 -->
+        <div class="product-card">
+            <button class="heart" onclick="addWishlist(this)">♡</button>
+
+            <div class="product-image">
+                <img src="an neck.webp" alt="Ankara Necklace">
+            </div>
+
+            <h3>Ankara Beaded Necklace</h3>
+            <p class="price">GH₵60.00</p>
+
+            <div class="rating">
+                ★★★★★ <span>(18)</span>
+            </div>
+
+            <button class="cart-btn" onclick="addToCart('Ankara Necklace', 60)">
+                Add to Cart
+            </button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= DEALS ================= -->
+<section class="deals">
+    <div class="deals-content">
+        <h2>Deals of the Week!</h2>
+
+        <p>
+            Amazing discounts on selected
+            authentic Ghanaian products.
+        </p>
+
+        <button onclick="shopDeals()">Shop Deals</button>
+    </div>
+
+    <div class="deal-product">
+        <img src="basket.webp" alt="Ghanaian Basket">
+        <span>UP TO<br><strong>25%</strong><br>OFF</span>
+    </div>
+
+    <div class="deal-benefits">
+        <div>
+            <b>🏅 Premium Quality</b>
+            <p>Handpicked with care</p>
+        </div>
+
+        <div>
+            <b>🛡 Authentic Products</b>
+            <p>100% Made in Ghana</p>
+        </div>
+
+        <div>
+            <b>🏷 Best Prices</b>
+            <p>Affordable for everyone</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= BRANDS ================= -->
+<section class="section">
+    <div class="section-heading">
+        <h2>Shop by Brand</h2>
+
+        <button onclick="viewBrands()">
+            View all brands →
+        </button>
+    </div>
+
+    <div class="brands">
+
+        <div>ADANSE<br><small>KENTE</small></div>
+
+        <div>GYE NYAME<br><small>CRAFTS</small></div>
+
+        <div>SHEA<br><small>NATURALS</small></div>
+
+        <div>AKWAABA<br><small>COLLECTIONS</small></div>
+
+        <div>KOKOA<br><small>GHANA</small></div>
+
+        <div>BEADS<br><small>BY AFRICA</small></div>
+
+        <div>HERITAGE<br><small>WEAR</small></div>
+
+        <div>WAAKYEE<br><small>FOODS</small></div>
+
+    </div>
+</section>
+
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials">
+    <h2>What Our Customers Say</h2>
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial">
+            <div class="customer">
+                <div class="avatar">AS</div>
+
+                <div>
+                    <strong>Ama Serwaa</strong>
+                    <small>Accra, Ghana</small>
+                </div>
+            </div>
+
+            <p>
+                "The quality of the products is top-notch!
+                I love supporting local businesses."
+            </p>
+
+            <div class="stars">★★★★★</div>
+        </div>
+
+
+        <div class="testimonial">
+            <div class="customer">
+                <div class="avatar">KM</div>
+
+                <div>
+                    <strong>Kofi Mensah</strong>
+                    <small>Kumasi, Ghana</small>
+                </div>
+            </div>
+
+            <p>
+                "Fast delivery and great customer service.
+                Made in Ghana Marketplace is the best!"
+            </p>
+
+            <div class="stars">★★★★★</div>
+        </div>
+
+
+        <div class="testimonial">
+            <div class="customer">
+                <div class="avatar">EA</div>
+
+                <div>
+                    <strong>Efua Adom</strong>
+                    <small>Takoradi, Ghana</small>
+                </div>
+            </div>
+
+            <p>
+                "I found unique items you can't get elsewhere.
+                Highly recommended!"
+            </p>
+
+            <div class="stars">★★★★★</div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+<section class="services">
+
+    <div>
+        <span>🚚</span>
+        <strong>Fast Delivery</strong>
+        <small>Across Ghana</small>
+    </div>
+
+    <div>
+        <span>🛡</span>
+        <strong>Secure Payments</strong>
+        <small>100% Safe</small>
+    </div>
+
+    <div>
+        <span>↩️</span>
+        <strong>7-Day Returns</strong>
+        <small>Easy Returns</small>
+    </div>
+
+    <div>
+        <span>🕐</span>
+        <strong>24/7 Support</strong>
+        <small>We are here to help</small>
+    </div>
+
+</section>
+
+
+<!-- ================= NEWSLETTER ================= -->
+<section class="newsletter">
+
+    <div class="newsletter-icon">
+        ✉
+    </div>
+
+    <div class="newsletter-text">
+        <h2>Stay Updated!</h2>
+
+        <p>
+            Subscribe to our newsletter for the latest deals,
+            new arrivals and updates.
+        </p>
+    </div>
+
+    <form onsubmit="subscribe(event)">
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email address"
+            required
+        >
+
+        <button type="submit">Subscribe</button>
+    </form>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+            <h2>🇬🇭 MADE IN <span>GHANA</span></h2>
+            <small>MARKETPLACE</small>
+
+            <p>
+                The home of authentic Ghanaian products.
+                Support local. Empower communities.
+                Build Ghana.
+            </p>
+
+            <div class="socials">
+                <a href="#">f</a>
+                <a href="#">◎</a>
+                <a href="#">𝕏</a>
+                <a href="#">▶</a>
+            </div>
+        </div>
+
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Categories</a>
+            <a href="#">Brands</a>
+            <a href="#">Deals</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+
+        <div>
+            <h3>Customer Service</h3>
+            <a href="#">FAQs</a>
+            <a href="#">Shipping & Delivery</a>
+            <a href="#">Returns & Refunds</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+
+        <div>
+            <h3>Contact Us</h3>
+            <p>📞 +233 30 123 4567</p>
+            <p>✉ info@madeinghanamarketplace.com</p>
+            <p>📍 Accra, Ghana</p>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2024 Made in Ghana Marketplace. All Rights Reserved.
+        <span>🇬🇭 Proudly Ghanaian</span>
+    </div>
+
+</footer>
